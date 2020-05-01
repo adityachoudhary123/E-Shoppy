@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="script.js"></script>
+<body>
+
+<div class="container-1">
+    <div class="container-logo">
+        <br>
+        <img src="/images/eShoppy1.png" width="300" height="150">
+    </div>
+    <br>
+    <br>
+    <br>
+    <h3>Login Page</h3>
+    <div class="container-1-flex">
+        <form class="login-form" th:action="@{/login}" method="post" >
+            <fieldset>
+                <div th:if="${param.error}" class="alert alert-danger">Invalid Username or Password</div>
+                <table>
+                    <tr>
+                        <td>User Name</td>
+                        <td><input id="user-name" type="text" name="username" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit" name="submit" value="submit" class="btn btn-primary" onclick="foo()">Submit</button></td>
+                        <td><a href="/register">Register</a></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<script>
+    function foo(){
+    sessionStorage.setItem("username", document.getElementById("user-name").value);
+    }
+</script>
+
+</body>
+</html>
