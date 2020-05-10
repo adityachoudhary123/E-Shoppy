@@ -38,15 +38,41 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/profile"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-                    <li><a href="/carts"><span class="glyphicon glyphicon-cart"></span> Cart</a></li>
+                    <li><a href="/carts"><i class="fa fa-shopping-cart" style="font-size:17px"></i> Cart</a></li>
                     <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <br>
-    <table id="product-display-table" class="product-display-table">
-    </table>
+    <div class="container-1">
+        <section class="container-home-section">
+            <img class="mySlides" src="/images/products/samsung_galaxy_mobile.jpg"
+                 style="width:500px; height:500px;">
+            <img class="mySlides" src="/images/products/sony_television.jpg"
+                 style="width:700px; height:500px;">
+            <img class="mySlides" src="/images/products/xiaomi_mobile.jpg"
+                 style="width:700px; height:500px;">
+        </section>
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 3000);
+    }
+</script>
+
 </body>
 </html>
 

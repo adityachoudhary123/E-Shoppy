@@ -103,4 +103,17 @@ form.example::after {
     border: 1px solid black;
     padding: 1px;
 }
-
+.container-home-section{
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+    margin: 0 auto;
+}
+.container-home-section img{
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+    margin: 0 auto;
+}

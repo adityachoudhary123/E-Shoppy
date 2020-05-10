@@ -37,7 +37,7 @@ public class Repository
         Session session = sf.openSession();
         Transaction tx = session.beginTransaction();
         try {
-            session.save(user);
+            session.saveOrUpdate(user);
             tx.commit();
             session.clear();
             session.close();
@@ -132,7 +132,7 @@ public class Repository
 
         Transaction tx = session.beginTransaction();
         try{
-            session.save(cart);
+            session.saveOrUpdate(cart);
             tx.commit();
             session.clear();
             session.close();

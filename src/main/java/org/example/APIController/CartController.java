@@ -24,7 +24,6 @@ public class CartController {
     @GetMapping("/cart")
     public List<Product> getCart(@RequestParam String username)
     {
-        System.out.println(username);
         return repo.getCart(username);
     }
 }
