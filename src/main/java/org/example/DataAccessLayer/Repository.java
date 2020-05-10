@@ -18,7 +18,6 @@ public class Repository
 {
     Configuration con;
     ServiceRegistry serviceRegistry;
-
     public Repository()
     {
         con = new Configuration();
